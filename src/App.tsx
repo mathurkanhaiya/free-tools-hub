@@ -5,6 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import ToolPage from "./pages/ToolPage.tsx";
+import CategoryPage from "./pages/CategoryPage.tsx";
+import SeoLandingPage from "./pages/SeoLandingPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -18,6 +20,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/tool/:slug" element={<ToolPage />} />
+          <Route path="/category/:category" element={<CategoryPage />} />
+          <Route path="/seo/:slug" element={<SeoLandingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
